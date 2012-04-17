@@ -78,6 +78,8 @@ cdv kernel/samsung/victory
 #git commit -m "DO NOT COMMIT TO GERRIT - test CONFIG_FB_S3C_NR_BUFFERS=6"
 echo "### yas529: Fix deadlock when disabling immediately after enabling http://review.cyanogenmod.com/#/c/14749/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/49/14749/2 && git cherry-pick FETCH_HEAD
+echo "### Experiment with 1.2GHz option, remove undervolting by CM dev team consensus http://review.cyanogenmod.com/#/c/14697/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/97/14697/4 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto packages/apps/Phone
