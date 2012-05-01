@@ -97,7 +97,7 @@ git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Camera
 cdb
 
 repo start auto packages/apps/Settings
-cdb packages/apps/Settings
+cdv packages/apps/Settings
 echo "### Settings: Use Holo theme for ActivityPicker Dialog http://review.cyanogenmod.com/#/c/15035/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Settings refs/changes/35/15035/2 && git cherry-pick FETCH_HEAD
 cdb
