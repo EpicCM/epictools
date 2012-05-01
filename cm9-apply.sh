@@ -58,6 +58,8 @@ echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#c
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
 echo "### Implement Camera GPS borrowed from jt1134 http://review.cyanogenmod.com/#/c/15002/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/02/15002/1 && git cherry-pick FETCH_HEAD
+echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
@@ -78,12 +80,26 @@ echo "### Test with CONFIG_FB_S3C_NR_BUFFERS=6 since =2 was rejected (read above
 http_patch http://asgard.ancl.hawaii.edu/~warren/test-CONFIG_FB_S3C_NR_BUFFERS-6.patch
 git add Kernel/arch/arm/configs/cyanogenmod_epicmtd_defconfig
 git commit -m "DO NOT COMMIT TO GERRIT - test CONFIG_FB_S3C_NR_BUFFERS=6"
+echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto packages/apps/Phone
 cdv packages/apps/Phone
 echo "### Phone: add voicemail notification setting http://review.cyanogenmod.com/#change,13706"
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/6 && git cherry-pick FETCH_HEAD
+cdb
+
+repo start auto packages/apps/Camera
+cdv packages/apps/Camera
+echo "### Camera: Use popup settings instead of knobs http://review.cyanogenmod.com/#/c/15356/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Camera refs/changes/56/15356/5 && git cherry-pick FETCH_HEAD
+cdb
+
+repo start auto packages/apps/Settings
+cdb packages/apps/Settings
+echo "### Settings: Use Holo theme for ActivityPicker Dialog http://review.cyanogenmod.com/#/c/15035/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Settings refs/changes/35/15035/2 && git cherry-pick FETCH_HEAD
 cdb
 
 ##### SUCCESS ####
