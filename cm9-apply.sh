@@ -60,6 +60,8 @@ echo "### Implement Camera GPS borrowed from jt1134 http://review.cyanogenmod.co
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/02/15002/1 && git cherry-pick FETCH_HEAD
 echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
+echo "epicmtd: Use integrated kernel building. http://review.cyanogenmod.com/#/c/14866/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/66/14866/6 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
@@ -84,7 +86,10 @@ echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
 echo "### Addition of Overclock(only) Code. http://review.cyanogenmod.com/#/c/15446"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/1 && git cherry-pick FETCH_HEAD
+echo "### Enable integrated kernel building. http://review.cyanogenmod.com/#/c/15459/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/59/15459/3 && git cherry-pick FETCH_HEAD
 cdb
+
 
 repo start auto packages/apps/Phone
 cdv packages/apps/Phone
