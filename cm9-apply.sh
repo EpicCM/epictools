@@ -82,6 +82,8 @@ git add Kernel/arch/arm/configs/cyanogenmod_epicmtd_defconfig
 git commit -m "DO NOT COMMIT TO GERRIT - test CONFIG_FB_S3C_NR_BUFFERS=6"
 echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
+echo "### Addition of Overclock(only) Code. http://review.cyanogenmod.com/#/c/15446"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto packages/apps/Phone
