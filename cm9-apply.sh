@@ -88,8 +88,6 @@ echo "### Addition of Overclock(only) Code. http://review.cyanogenmod.com/#/c/15
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/1 && git cherry-pick FETCH_HEAD
 echo "### Enable integrated kernel building. http://review.cyanogenmod.com/#/c/15459/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/59/15459/3 && git cherry-pick FETCH_HEAD
-echo "### Addition of Overclock(only) Code. http://review.cyanogenmod.com/#/c/15446/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/1 && git cherry-pick FETCH_HEAD
 cdb
 
 
