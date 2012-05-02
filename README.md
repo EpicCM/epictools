@@ -27,7 +27,7 @@ Auto Apply Patches
 This script will remove any topic branches named auto, then apply all patches under topic branch auto.
 
 ```
-epictools/apply.sh
+epictools/cm9-apply.sh
 ```
 
 Build
