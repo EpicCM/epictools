@@ -77,9 +77,9 @@ git cherry-pick 6126b51da4e2402bdd519ade4a4caba5dbaa3098
 #Deadlock condition fix
 echo 'Fix to prevent deadlock http://review.cyanogenmod.com/#/c/14749/'
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/49/14749/2 && git cherry-pick FETCH_HEAD
-#Addition of OC - Removed due to current incompatibilities
-#echo 'Adding 1.2ghz OC http://review.cyanogenmod.com/#/c/14697/'
-#git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/97/14697/4 && git cherry-pick FETCH_HEAD
+#Addition of OC
+echo 'Adding 1.2ghz OC http://review.cyanogenmod.com/#/c/14697/'
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/72/15072/1 && git cherry-pick FETCH_HEAD
 
 cdb
 ##### SUCCESS ####
