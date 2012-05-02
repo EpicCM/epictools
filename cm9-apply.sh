@@ -84,15 +84,14 @@ git add Kernel/arch/arm/configs/cyanogenmod_epicmtd_defconfig
 git commit -m "DO NOT COMMIT TO GERRIT - test CONFIG_FB_S3C_NR_BUFFERS=6"
 echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
-## Hold for now to test pvr patch.
-#echo "### Addition of Overclock(only) Code. http://review.cyanogenmod.com/#/c/15446"
-#git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/1 && git cherry-pick FETCH_HEAD
 echo "### Enable integrated kernel building. http://review.cyanogenmod.com/#/c/15459/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/59/15459/3 && git cherry-pick FETCH_HEAD
 echo "### Use DVFS locks instead of cpufreq policy mangling in pvr. http://review.cyanogenmod.com/15484"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/84/15484/1 && git cherry-pick FETCH_HEAD
 echo "### Ensure SLEEP_FREQ is used for suspend to prevent crash. http://review.cyanogenmod.com/15490"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/90/15490/1 && git cherry-pick FETCH_HEAD
+echo "### Add 1.2GHz overclock, disabled by default. http://review.cyanogenmod.com/15446"
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/2 && git cherry-pick FETCH_HEAD
 cdb
 
 
