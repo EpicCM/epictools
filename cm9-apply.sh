@@ -91,6 +91,8 @@ echo "### Enable integrated kernel building. http://review.cyanogenmod.com/#/c/1
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/59/15459/3 && git cherry-pick FETCH_HEAD
 echo "### Use DVFS locks instead of cpufreq policy mangling in pvr. http://review.cyanogenmod.com/15484"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/84/15484/1 && git cherry-pick FETCH_HEAD
+echo "### Ensure SLEEP_FREQ is used for suspend to prevent crash. http://review.cyanogenmod.com/15490"
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/90/15490/1 && git cherry-pick FETCH_HEAD
 cdb
 
 
