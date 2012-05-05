@@ -58,10 +58,8 @@ echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#c
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
 echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
-echo "### Integrated 3.0 kernel building"
-http_patch http://uberpinguin.dyndns.org/temp/patches/patch-3.0_build-integrated_kernel-device.diff 
-git rm cm.dependencies
-git commit -m "DO NOT COMMIT TO GERRIT - Integrated Kernel building, adjustment for 3.0"
+echo "### cm9-3.0-apply.sh: epicmtd: Temporary patch for kernel-3.0.x testing (DO NOT COMMIT)"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/85/15585/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
@@ -71,7 +69,7 @@ git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs
 cdb
 
 repo start auto kernel/samsung/victory/Kernel
-cdv kernel/samsung/victory/Kernel
+cdv kernel/samsung/victory3/Kernel
 echo "### Integrated 3.0 kernel building"
 http_patch http://uberpinguin.dyndns.org/temp/patches/patch-3.0_build-integrated_kernel.diff 
 git add .
