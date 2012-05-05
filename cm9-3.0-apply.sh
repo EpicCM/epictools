@@ -68,7 +68,7 @@ echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's beh
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/3 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto kernel/samsung/victory/Kernel
+repo start auto kernel/samsung/victory3/Kernel
 cdv kernel/samsung/victory3/Kernel
 echo "### Integrated 3.0 kernel building"
 http_patch http://uberpinguin.dyndns.org/temp/patches/patch-3.0_build-integrated_kernel.diff 
