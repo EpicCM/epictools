@@ -58,8 +58,6 @@ echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#c
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
 echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
-echo "### epicmtd: Use integrated kernel building. http://review.cyanogenmod.com/#/c/14866/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/66/14866/6 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
@@ -68,8 +66,6 @@ echo "### Patch: CDMA 1 signal bar threshold s/100/105/ to match Samsung"
 http_patch http://asgard.ancl.hawaii.edu/~warren/testonly-cdma-1bar-105-dBm-v3.patch
 git add telephony/java/android/telephony/SignalStrength.java
 git commit -m "DO NOT COMMIT TO GERRIT - need to make into config.xml option for upstream"
-echo "### telephony: SamsungRIL cleanup http://review.cyanogenmod.com/#/c/15054/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/54/15054/5 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto kernel/samsung/victory
@@ -82,8 +78,6 @@ git add Kernel/arch/arm/configs/cyanogenmod_epicmtd_defconfig
 git commit -m "DO NOT COMMIT TO GERRIT - test CONFIG_FB_S3C_NR_BUFFERS=6"
 echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
-echo "### Enable integrated kernel building. http://review.cyanogenmod.com/#/c/15459/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/59/15459/3 && git cherry-pick FETCH_HEAD
 echo "### Call cpufreq_update_policy on DVFS events and force SLEEP_FREQ on suspend. http://review.cyanogenmod.com/15490"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/90/15490/2 && git cherry-pick FETCH_HEAD
 echo "### Use DVFS locks instead of cpufreq policy mangling in pvr. http://review.cyanogenmod.com/15484"
