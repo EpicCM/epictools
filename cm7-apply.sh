@@ -62,21 +62,6 @@ git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs
 cdb
 repo start auto kernel/samsung/victory
 cdv kernel/samsung/victory
-#ICS volume patch
-echo 'Cherry-pick ICS speaker volume patch'
-git cherry-pick 1e5a55b9d04267f4ef4288234f798df3f8989a62
-#Dock audio patch
-echo 'Cherry-pick dock audio ICS patch'
-git cherry-pick f952cc9b6358b1af2d3425f3b3c7f24e95d6ac27
-#Headset mic volume patch
-echo 'Cherry-pick headset-mic volume patch, to match EL30'
-git cherry-pick bdb608a3663c2a372d6b5c8e3f9eb37f17ced35a
-#Enable tun
-echo 'Cherry-pick tun'
-git cherry-pick 6126b51da4e2402bdd519ade4a4caba5dbaa3098
-#Deadlock condition fix
-echo 'Fix to prevent deadlock http://review.cyanogenmod.com/#/c/14749/'
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/49/14749/2 && git cherry-pick FETCH_HEAD
 #Addition of OC
 echo 'Adding 1.2ghz OC http://review.cyanogenmod.com/#/c/14697/'
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/72/15072/1 && git cherry-pick FETCH_HEAD
