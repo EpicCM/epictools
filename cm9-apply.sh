@@ -62,20 +62,12 @@ cdb
 
 repo start auto frameworks/base 
 cdv frameworks/base
-echo "### Patch: CDMA 1 signal bar threshold s/100/105/ to match Samsung"
-http_patch http://asgard.ancl.hawaii.edu/~warren/testonly-cdma-1bar-105-dBm-v3.patch
-git add telephony/java/android/telephony/SignalStrength.java
-git commit -m "DO NOT COMMIT TO GERRIT - need to make into config.xml option for upstream"
+echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/3 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto kernel/samsung/victory
 cdv kernel/samsung/victory
-#echo "### Epicmtd: reduce framebuffer NR size to 2 and frees 7mb to userspace http://review.cyanogenmod.com/#change,14386"
-#git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_kernel_samsung_victory refs/changes/86/14386/1 && git cherry-pick FETCH_HEAD
-echo "### Test with CONFIG_FB_S3C_NR_BUFFERS=6 since =2 was rejected (read above gerrit)"
-http_patch http://asgard.ancl.hawaii.edu/~warren/test-CONFIG_FB_S3C_NR_BUFFERS-6.patch
-git add Kernel/arch/arm/configs/cyanogenmod_epicmtd_defconfig
-git commit -m "DO NOT COMMIT TO GERRIT - test CONFIG_FB_S3C_NR_BUFFERS=6"
 echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
 echo "### Call cpufreq_update_policy on DVFS events and force SLEEP_FREQ on suspend. http://review.cyanogenmod.com/15490"
