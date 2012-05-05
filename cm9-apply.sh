@@ -101,12 +101,6 @@ echo "### Camera: Use popup settings instead of knobs http://review.cyanogenmod.
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Camera refs/changes/56/15356/5 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto packages/apps/Settings
-cdv packages/apps/Settings
-echo "### Settings: Use Holo theme for ActivityPicker Dialog http://review.cyanogenmod.com/#/c/15035/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Settings refs/changes/35/15035/2 && git cherry-pick FETCH_HEAD
-cdb
-
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
