@@ -83,11 +83,9 @@ echo "### Phone: add voicemail notification setting http://review.cyanogenmod.co
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/6 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto packages/apps/Camera
-cdv packages/apps/Camera
-echo "### Camera: Use popup settings instead of knobs http://review.cyanogenmod.com/#/c/15356/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Camera refs/changes/56/15356/5 && git cherry-pick FETCH_HEAD
-cdb
+#repo start auto packages/apps/Camera
+#cdv packages/apps/Camera
+#cdb
 
 ##### SUCCESS ####
 SUCCESS=true
