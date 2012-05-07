@@ -83,9 +83,11 @@ echo "### Phone: add voicemail notification setting http://review.cyanogenmod.co
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/6 && git cherry-pick FETCH_HEAD
 cdb
 
-#repo start auto packages/apps/Camera
-#cdv packages/apps/Camera
-#cdb
+repo start auto vendor/cm
+cdv vendor/cm
+echo "### Simplifly ROM filename, add CM_EXPERIMENTAL, datestamp UNOFFICIAL, remove some dead code. http://review.cyanogenmod.com/#/c/15662/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_vendor_cm refs/changes/62/15662/1 && git cherry-pick FETCH_HEAD
+cdb
 
 ##### SUCCESS ####
 SUCCESS=true
