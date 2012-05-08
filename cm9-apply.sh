@@ -88,6 +88,8 @@ echo "### epicmtd: Remove powersave cpufreq governor http://review.cyanogenmod.c
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/44/15644/1 && git cherry-pick FETCH_HEAD
 echo "### Omnibus fixes for cypress-touchkey. http://review.cyanogenmod.com/15654"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/54/15654/2 && git cherry-pick FETCH_HEAD
+echo "### On slide open, set keyboard backlight to configured state, not always on. http://review.cyanogenmod.com/15750"
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/50/15750/1 && git cherry-pick FETCH_HEAD
 cdb
 
 
