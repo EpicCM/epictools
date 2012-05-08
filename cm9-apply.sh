@@ -56,20 +56,24 @@ repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
 echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#change,13739"
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
-echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
+## Deprecated in favor of non-device-specific "Light sensor levels" settings.
+#echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
+#git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
 cdv frameworks/base
 echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/3 && git cherry-pick FETCH_HEAD
+echo "### Additional fixes for button/keyboard backlight auto-brightness. http://review.cyanogenmod.com/15726"
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/26/15726/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto kernel/samsung/victory
 cdv kernel/samsung/victory
-echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
+## Deprecated in favor of omnibus cypress-touchkey fixes.
+#echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
+#git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
 echo "### Call cpufreq_update_policy on DVFS events and force SLEEP_FREQ on suspend. http://review.cyanogenmod.com/15490"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/90/15490/2 && git cherry-pick FETCH_HEAD
 echo "### Use DVFS locks instead of cpufreq policy mangling in pvr. http://review.cyanogenmod.com/15484"
@@ -80,6 +84,8 @@ echo "### Add 1.2GHz overclock, disabled by default. http://review.cyanogenmod.c
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/2 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Remove powersave cpufreq governor http://review.cyanogenmod.com/#/c/15644/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/44/15644/1 && git cherry-pick FETCH_HEAD
+echo "### Omnibus fixes for cypress-touchkey. http://review.cyanogenmod.com/15654"
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/54/15654/1 && git cherry-pick FETCH_HEAD
 cdb
 
 
