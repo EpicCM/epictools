@@ -59,6 +59,8 @@ git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epi
 ## Deprecated in favor of non-device-specific "Light sensor levels" settings.
 #echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
 #git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
+echo "### epicmtd: Read bt mac address from ril and setprop to our own BDADDR PATH http://review.cyanogenmod.com/#/c/15603/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/03/15603/6 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
