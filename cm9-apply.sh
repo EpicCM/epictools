@@ -87,7 +87,7 @@ git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory re
 echo "### epicmtd: Remove powersave cpufreq governor http://review.cyanogenmod.com/#/c/15644/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/44/15644/1 && git cherry-pick FETCH_HEAD
 echo "### Omnibus fixes for cypress-touchkey. http://review.cyanogenmod.com/15654"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/54/15654/1 && git cherry-pick FETCH_HEAD
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/54/15654/2 && git cherry-pick FETCH_HEAD
 cdb
 
 
