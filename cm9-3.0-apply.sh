@@ -65,7 +65,7 @@ cdb
 repo start auto frameworks/base 
 cdv frameworks/base
 echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/3 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/4 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto kernel/samsung/victory3/Kernel
@@ -86,7 +86,7 @@ cdb
 repo start auto vendor/cm
 cdv vendor/cm
 echo "### Simplifly ROM filename, add CM_EXPERIMENTAL, datestamp UNOFFICIAL, remove some dead code. http://review.cyanogenmod.com/#/c/15662/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_vendor_cm refs/changes/62/15662/2 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_vendor_cm refs/changes/62/15662/3 && git cherry-pick FETCH_HEAD
 cdb
 
 ##### SUCCESS ####
