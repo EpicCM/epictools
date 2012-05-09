@@ -76,16 +76,6 @@ cdv kernel/samsung/victory
 ## Deprecated in favor of omnibus cypress-touchkey fixes.
 #echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
 #git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/5 && git cherry-pick FETCH_HEAD
-echo "### Call cpufreq_update_policy on DVFS events and force SLEEP_FREQ on suspend. http://review.cyanogenmod.com/15490"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/90/15490/2 && git cherry-pick FETCH_HEAD
-echo "### Use DVFS locks instead of cpufreq policy mangling in pvr. http://review.cyanogenmod.com/15484"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/84/15484/2 && git cherry-pick FETCH_HEAD
-echo "### Add dvfs_printk_mask sysfs attribute to mask printing of DVFS lock events. http://review.cyanogenmod.com/15535"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/35/15535/2 && git cherry-pick FETCH_HEAD
-echo "### Add 1.2GHz overclock, disabled by default. http://review.cyanogenmod.com/15446"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/46/15446/2 && git cherry-pick FETCH_HEAD
-echo "### epicmtd: Remove powersave cpufreq governor http://review.cyanogenmod.com/#/c/15644/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/44/15644/1 && git cherry-pick FETCH_HEAD
 echo "### Omnibus fixes for cypress-touchkey. http://review.cyanogenmod.com/15654"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/54/15654/2 && git cherry-pick FETCH_HEAD
 echo "### On slide open, set keyboard backlight to configured state, not always on. http://review.cyanogenmod.com/15750"
