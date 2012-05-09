@@ -92,13 +92,9 @@ echo "### Simplifly ROM filename, add CM_EXPERIMENTAL, datestamp UNOFFICIAL, rem
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_vendor_cm refs/changes/62/15662/3 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto packages/apps/Camera
-cdv packages/apps/Camera
-echo "### Camera : Use non translatable array for comparison http://review.cyanogenmod.com/#/c/15749/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Camera refs/changes/49/15749/6 && git cherry-pick FETCH_HEAD
-echo "### Camera: fix crash on restore preference http://review.cyanogenmod.com/#/c/15734/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Camera refs/changes/34/15734/1 && git cherry-pick FETCH_HEAD
-cdb
+#repo start auto packages/apps/Camera
+#cdv packages/apps/Camera
+#cdb
 
 ##### SUCCESS ####
 SUCCESS=true
