@@ -56,7 +56,7 @@ set -e
 #echo "Removing prebuilt Kernel"
 #if [ -a device/samsung/epicmtd/kernel ]
 #   then
-#	rm device/samsung/epicmtd/kernel
+#  rm device/samsung/epicmtd/kernel
 #fi
 #echo "Compiling Kernel"
 #cdv kernel/samsung/victory/
@@ -126,12 +126,6 @@ cdv vendor/samsung
 echo "### Samsung device proprietaries http://gerrit.sudoservers.com:8080/#/c/36/"
 git fetch http://gerrit.sudoservers.com:8080/AOKP/vendor_samsung refs/changes/36/36/1 && git cherry-pick FETCH_HEAD
 cdb
-
-#repo start auto device/samsung/epicmtd
-#cdv device/samsung/epicmtd
-#echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#change,13739"
-#git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick #FETCH_HEAD
-#cdb
 
 ##### SUCCESS ####
 SUCCESS=true
