@@ -101,18 +101,18 @@ cdb
 
 ###Added for AOKP###
 
-cdv frameworks/base
-echo "### Frameworks: Keyboard fix http://gerrit.sudoservers.com:8080/#/c/25/ and http://gerrit.sudoservers.com:8080/#/c/89/"
-git fetch http://gerrit.sudoservers.com:8080/AOKP/frameworks_base refs/changes/25/25/1 && git cherry-pick FETCH_HEAD
-git fetch http://gerrit.sudoservers.com:8080/AOKP/frameworks_base refs/changes/89/89/3 && git cherry-pick FETCH_HEAD
-cdb
+#cdv frameworks/base
+#echo "### Frameworks: Keyboard fix http://gerrit.sudoservers.com:8080/#/c/25/ and http://gerrit.sudoservers.com:8080/#/c/89/"
+#git fetch http://gerrit.sudoservers.com:8080/AOKP/frameworks_base refs/changes/25/25/1 && git cherry-pick FETCH_HEAD
+#git fetch http://gerrit.sudoservers.com:8080/AOKP/frameworks_base refs/changes/89/89/3 && git cherry-pick FETCH_HEAD
+#cdb
 
 
-repo start auto vendor/aokp
-cdv vendor/aokp
-echo "### Vendor Menu and Setup http://gerrit.sudoservers.com:8080/#/c/26/"
-git fetch http://gerrit.sudoservers.com:8080/AOKP/vendor_aokp refs/changes/26/26/2 && git cherry-pick FETCH_HEAD
-cdv
+#repo start auto vendor/aokp
+#cdv vendor/aokp
+#echo "### Vendor Menu and Setup http://gerrit.sudoservers.com:8080/#/c/26/"
+#git fetch http://gerrit.sudoservers.com:8080/AOKP/vendor_aokp refs/changes/26/26/2 && git cherry-pick FETCH_HEAD
+#cdv
 
 
 repo start auto vendor/samsung
