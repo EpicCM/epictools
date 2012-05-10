@@ -73,9 +73,9 @@ cdb
 repo start auto kernel/samsung/victory
 cdv kernel/samsung/victory
 echo "### Omnibus fixes for cypress-touchkey. http://review.cyanogenmod.com/15654"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/54/15654/2 && git cherry-pick FETCH_HEAD
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/54/15654/3 && git cherry-pick FETCH_HEAD
 echo "### Add sysfs control for capacitive backlights. http://review.cyanogenmod.com/#/c/15420"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/6 && git cherry-pick FETCH_HEAD
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/20/15420/7 && git cherry-pick FETCH_HEAD
 echo "### On slide open, set keyboard backlight to configured state, not always on. http://review.cyanogenmod.com/15750"
 git fetch http://r.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/50/15750/1 && git cherry-pick FETCH_HEAD
 cdb
