@@ -57,7 +57,7 @@ cdv device/samsung/epicmtd
 echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#change,13739"
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
 echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/3 && git cherry-pick FETCH_HEAD
+git fetch http://r.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/4 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Read bt mac address from ril and setprop to our own BDADDR PATH http://review.cyanogenmod.com/#/c/15603/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/03/15603/7 && git cherry-pick FETCH_HEAD
 cdb
