@@ -55,10 +55,13 @@ set -e
 
 repo start auto frameworks/base 
 cdv frameworks/base
-#echo "### Sensor: Add RotationVectorSensor2 http://review.cyanogenmod.com/#change,14609"
-#git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_frameworks_base refs/changes/09/14609/1 && git cherry-pick FETCH_HEAD
 echo "### Separate configuration of auto-brightness for button/keyboard backlights http://review.cyanogenmod.com/#/c/14196/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/96/14196/1 && git cherry-pick FETCH_HEAD
+cdb
+repo start auto device/samsung/epicmtd
+cdv device/samsung/epicmtd
+echo 'Un-revert liblight fixes (Removed because it depends on out of tree commit above)'
+git revert b11e7854b86cff56054a007a5e7fa5cf535a7004
 cdb
 repo start auto kernel/samsung/victory
 cdv kernel/samsung/victory
