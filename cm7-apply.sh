@@ -63,13 +63,6 @@ cdv device/samsung/epicmtd
 echo 'Un-revert liblight fixes (Removed because it depends on out of tree commit above)'
 git revert b11e7854b86cff56054a007a5e7fa5cf535a7004
 cdb
-repo start auto kernel/samsung/victory
-cdv kernel/samsung/victory
-#Addition of OC
-echo 'Adding 1.2ghz OC http://review.cyanogenmod.com/#/c/14697/'
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/72/15072/1 && git cherry-pick FETCH_HEAD
-
-cdb
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
