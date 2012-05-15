@@ -52,23 +52,30 @@ set -e
 
 ################ Apply Patches Below ####################
 
+repo start auto bootable/recovery
+cdv bootable/recovery
+echo "### recovery: Allow key to repeat on hold. http://review.cyanogenmod.com/#/c/15865/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_bootable_recovery refs/changes/65/15865/13 && git cherry-pick FETCH_HEAD
+cdb
+
 repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
 echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#change,13739"
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
-## Deprecated in favor of non-device-specific "Light sensor levels" settings.
-#echo "### Add EpicParts with option to disable capacitive backlights. http://review.cyanogenmod.com/#/c/15421"
-#git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/21/15421/2 && git cherry-pick FETCH_HEAD
+echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
+echo "### Change wifi module location to ease kernel 3.0.x testing (DO NO COMMIT) http://review.cyanogenmod.com/#/c/16002/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/02/16002/1 && git cherry-pick FETCH_HEAD
 echo "### cm9-3.0-apply.sh: epicmtd: Temporary patch for kernel-3.0.x testing (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15585/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/85/15585/1 && git cherry-pick FETCH_HEAD
+echo "### Update init.victory.usb.rc to fix adb, etc. for kernel-3.0.x (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15928/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/28/15928/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
 cdv frameworks/base
 echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
-echo "### Additional fixes for button/keyboard backlight auto-brightness. http://review.cyanogenmod.com/15726"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/26/15726/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto kernel/samsung/victory3/Kernel
@@ -78,7 +85,6 @@ http_patch http://uberpinguin.dyndns.org/temp/patches/patch-3.0_build-integrated
 git add .
 git commit -m "DO NOT COMMIT TO GERRIT - Integrated Kernel building, adjustment for 3.0"
 cdb
-
 
 repo start auto packages/apps/Phone
 cdv packages/apps/Phone
@@ -91,10 +97,6 @@ cdv vendor/cm
 echo "### Simplifly ROM filename, add CM_EXPERIMENTAL, datestamp UNOFFICIAL, remove some dead code. http://review.cyanogenmod.com/#/c/15662/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_vendor_cm refs/changes/62/15662/3 && git cherry-pick FETCH_HEAD
 cdb
-
-#repo start auto packages/apps/Camera
-#cdv packages/apps/Camera
-#cdb
 
 ##### SUCCESS ####
 SUCCESS=true
