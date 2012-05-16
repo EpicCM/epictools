@@ -70,6 +70,8 @@ echo "### cm9-3.0-apply.sh: epicmtd: Temporary patch for kernel-3.0.x testing (D
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/85/15585/1 && git cherry-pick FETCH_HEAD
 echo "### Update init.victory.usb.rc to fix adb, etc. for kernel-3.0.x (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15928/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/28/15928/1 && git cherry-pick FETCH_HEAD
+echo "### epicmtd: Permission updates for kernel-3.0.x (DO NOT COMMIT) http://review.cyanogenmod.com/16080"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/80/16080/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
