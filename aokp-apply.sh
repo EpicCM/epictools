@@ -51,18 +51,6 @@ repo abandon auto
 repo abandon translations
 set -e
 
-############### Prep for new Kernel ##################
-
-#echo "Removing prebuilt Kernel"
-#if [ -a device/samsung/epicmtd/kernel ]
-#   then
-#  rm device/samsung/epicmtd/kernel
-#fi
-#echo "Compiling Kernel"
-#cdv kernel/samsung/victory/
-#. build_kernel.sh
-#echo "Done, adding commits"
-
 ################ Apply Patches Below ####################
 
 repo start auto device/samsung/epicmtd
@@ -122,6 +110,13 @@ cdv vendor/samsung
 echo "### Samsung device proprietaries http://gerrit.sudoservers.com:8080/#/c/36/"
 git fetch http://gerrit.sudoservers.com:8080/AOKP/vendor_samsung refs/changes/36/36/1 && git cherry-pick FETCH_HEAD
 cdb
+
+repo start auto packages/providers/MediaProvider/
+cdv packages/providers/MediaProvider/
+echo "### Media Provider Fix - Lack of media http://gerrit.sudoservers.com:8080/#/c/36/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_providers_MediaProvider refs/changes/51/13251/1 && git cherry-pick FETCH_HEAD
+cdb
+
 
 ##### SUCCESS ####
 SUCCESS=true
