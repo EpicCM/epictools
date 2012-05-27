@@ -74,13 +74,6 @@ repo start auto frameworks/base
 cdv frameworks/base
 echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
-echo 'Lockscreen weather - framework http://r.cyanogenmod.com/#/c/16541/'
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/46/16546/1 && git cherry-pick FETCH_HEAD
-cdb
-repo start auto packages/apps/Settings
-cdv packages/apps/Settings
-echo 'Lockscreen Weather - settings http://r.cyanogenmod.com/#/c/16547/'
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_packages_apps_Settings refs/changes/47/16547/1 && git cherry-pick FETCH_HEAD
 cdb
 
 #repo start auto kernel/samsung/victory
