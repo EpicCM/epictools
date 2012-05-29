@@ -61,7 +61,7 @@ cdb
 repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
 echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#change,13739"
-git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/2 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Read bt mac address from ril and setprop to our own BDADDR PATH http://review.cyanogenmod.com/#/c/15603/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/03/15603/7 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
@@ -83,7 +83,7 @@ cdb
 repo start auto packages/apps/Phone
 cdv packages/apps/Phone
 echo "### Phone: add voicemail notification setting http://review.cyanogenmod.com/#change,13706"
-git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/6 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/7 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto vendor/cm
