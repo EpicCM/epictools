@@ -55,7 +55,7 @@ set -e
 repo start auto bootable/recovery
 cdv bootable/recovery
 echo "### recovery: Allow key to repeat on hold. http://review.cyanogenmod.com/#/c/15865/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_bootable_recovery refs/changes/65/15865/13 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_bootable_recovery refs/changes/65/15865/14 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto device/samsung/epicmtd
