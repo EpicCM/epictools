@@ -60,10 +60,8 @@ git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs
 cdb
 repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
-echo 'Un-revert liblight fixes (Removed because it depends on out of tree commit above)'
-git revert b11e7854b86cff56054a007a5e7fa5cf535a7004
-echo 'Add EpicParts http://r.cyanogenmod.com/#/c/16043/'
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/43/16043/1 && git cherry-pick FETCH_HEAD
+echo '### Restore TW cap light timeout http://review.cyanogenmod.com/#/c/16845/'
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/45/16845/1 && git cherry-pick FETCH_HEAD
 cdb
 ##### SUCCESS ####
 SUCCESS=true
