@@ -64,8 +64,6 @@ echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#c
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/2 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Read bt mac address from ril and setprop to our own BDADDR PATH http://review.cyanogenmod.com/#/c/15603/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/03/15603/7 && git cherry-pick FETCH_HEAD
-echo "### epicmtd: Fix permissions for wimax device node http://review.cyanogenmod.com/#/c/16961"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/61/16961/2 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
 echo "### Change wifi module location to ease kernel 3.0.x testing (DO NO COMMIT) http://review.cyanogenmod.com/#/c/16002/"
