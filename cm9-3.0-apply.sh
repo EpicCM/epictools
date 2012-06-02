@@ -86,10 +86,6 @@ echo "### Integrated 3.0 kernel building"
 http_patch http://uberpinguin.dyndns.org/temp/patches/patch-3.0_build-integrated_kernel.diff 
 git add .
 git commit -m "DO NOT COMMIT TO GERRIT - Integrated Kernel building, adjustment for 3.0"
-echo "### Fimc fix for Front Facing Camera"
-http_patch http://uberpinguin.dyndns.org/temp/patches/0001-VICTORY-FIMC-Adjust-for-front-facing-camera.patch
-git add .
-git commit -m "DO NOT COMMIT TO GERRIT - VICTORY: FIMC: Adjust for front facing camera."
 cdb
 
 repo start auto packages/apps/Phone
