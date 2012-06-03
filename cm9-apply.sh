@@ -62,6 +62,8 @@ repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
 echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#change,13739"
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/2 && git cherry-pick FETCH_HEAD
+echo "### epicmtd: Read bt mac address from ril and setprop to our own BDADDR PATH http://review.cyanogenmod.com/#/c/15603/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/03/15603/8 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
 echo "### Change wifi module location to ease kernel 3.0.x testing (DO NO COMMIT) http://review.cyanogenmod.com/#/c/16002/"
@@ -74,6 +76,8 @@ echo "## Phone: add voicemail notification setting  http://review.cyanogenmod.co
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/83/16983/2 && git cherry-pick FETCH_HEAD
 echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
+echo "### Remove references to removed notifications http://review.cyanogenmod.com/#/c/17006/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/06/17006/1 && git cherry-pick FETCH_HEAD
 cdb
 
 #repo start auto kernel/samsung/victory
