@@ -94,12 +94,6 @@ echo "### Simplifly ROM filename, add CM_EXPERIMENTAL, datestamp UNOFFICIAL, rem
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_vendor_cm refs/changes/62/15662/4 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto packages/apps/Settings
-cdv packages/apps/Settings
-echo "### Revert PT-PT: added missing translations and corrected pt-br words to pt-pt http://review.cyanogenmod.com/#/c/17008/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Settings refs/changes/08/17008/1 && git cherry-pick FETCH_HEAD
-cdb
-
 #repo start auto packages/apps/Camera
 #cdv packages/apps/Camera
 #cdb
