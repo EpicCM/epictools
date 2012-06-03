@@ -82,8 +82,6 @@ echo "## Phone: add voicemail notification setting  http://review.cyanogenmod.co
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/83/16983/2 && git cherry-pick FETCH_HEAD
 echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
-echo "### Remove references to removed notifications http://review.cyanogenmod.com/#/c/17006/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/06/17006/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto kernel/samsung/victory3/Kernel
