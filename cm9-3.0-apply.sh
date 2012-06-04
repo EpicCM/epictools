@@ -60,8 +60,8 @@ cdb
 
 repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
-echo "### epicmtd: enable enable_mwinotif_option http://review.cyanogenmod.com/#change,13739"
-git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/2 && git cherry-pick FETCH_HEAD
+echo "### epicmtd: enable sprint_mwi_quirk on epicmtd http://review.cyanogenmod.com/#change,13739"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/3 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
 echo "### Change wifi module location to ease kernel 3.0.x testing (DO NO COMMIT) http://review.cyanogenmod.com/#/c/16002/"
@@ -76,8 +76,8 @@ cdb
 
 repo start auto frameworks/base 
 cdv frameworks/base
-echo "## Phone: add voicemail notification setting  http://review.cyanogenmod.com/#/c/13706/" 
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/83/16983/2 && git cherry-pick FETCH_HEAD
+echo "## Phone: add spint_mwi_quirk (2/2) http://review.cyanogenmod.com/#/c/16983/" 
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/83/16983/3 && git cherry-pick FETCH_HEAD
 echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
 cdb
@@ -92,8 +92,9 @@ cdb
 
 repo start auto packages/apps/Phone
 cdv packages/apps/Phone
-echo "### Phone: add voicemail notification setting http://review.cyanogenmod.com/#change,13706"
-git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/8 && git cherry-pick FETCH_HEAD
+echo "### Phone: add spint_mwi_quirk (1/2) http://review.cyanogenmod.com/#change,13706"
+git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/9 && git cherry-pick FETCH_HEAD
+
 cdb
 
 repo start auto vendor/cm
