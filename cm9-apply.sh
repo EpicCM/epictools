@@ -83,7 +83,7 @@ cdb
 repo start auto packages/apps/Phone
 cdv packages/apps/Phone
 echo "### Phone: add spint_mwi_quirk (1/2) http://review.cyanogenmod.com/#change,13706"
-git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/10 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/11 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto vendor/cm
