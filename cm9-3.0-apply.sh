@@ -66,8 +66,6 @@ echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
 echo "### Change wifi module location to ease kernel 3.0.x testing (DO NO COMMIT) http://review.cyanogenmod.com/#/c/16002/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/02/16002/1 && git cherry-pick FETCH_HEAD
-echo "### epicmtd: libcamera: Fix taking photo after video http://review.cyanogenmod.com/#/c/17138/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/38/17138/1 && git cherry-pick FETCH_HEAD
 echo "### cm9-3.0-apply.sh: epicmtd: Temporary patch for kernel-3.0.x testing (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15585/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/85/15585/1 && git cherry-pick FETCH_HEAD
 echo "### Update init.victory.usb.rc to fix adb, etc. for kernel-3.0.x (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15928/"
@@ -84,13 +82,9 @@ echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's beh
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto kernel/samsung/victory3/Kernel
-cdv kernel/samsung/victory3/Kernel
-echo "### Integrated 3.0 kernel building"
-http_patch http://uberpinguin.dyndns.org/temp/patches/patch-3.0_build-integrated_kernel.diff 
-git add .
-git commit -m "DO NOT COMMIT TO GERRIT - Integrated Kernel building, adjustment for 3.0"
-cdb
+#repo start auto kernel/samsung/victory3/Kernel
+#cdv kernel/samsung/victory3/Kernel
+#cdb
 
 repo start auto packages/apps/Phone
 cdv packages/apps/Phone
