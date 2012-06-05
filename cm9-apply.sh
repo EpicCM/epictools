@@ -66,8 +66,6 @@ echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
 echo "### Change wifi module location to ease kernel 3.0.x testing (DO NO COMMIT) http://review.cyanogenmod.com/#/c/16002/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/02/16002/1 && git cherry-pick FETCH_HEAD
-echo "### epicmtd: libcamera: Fix taking photo after video http://review.cyanogenmod.com/#/c/17138/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/38/17138/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
