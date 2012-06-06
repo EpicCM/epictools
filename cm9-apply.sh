@@ -72,9 +72,11 @@ echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's beh
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
 cdb
 
-#repo start auto kernel/samsung/victory
-#cdv kernel/samsung/victory
-#cdb
+repo start auto kernel/samsung/victory
+cdv kernel/samsung/victory
+echo "### epicmtd: Add CIFS and FUSE to kernel http://review.cyanogenmod.com/#/c/17194/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_kernel_samsung_victory refs/changes/94/17194/1 && git cherry-pick FETCH_HEAD
+cdb
 
 repo start auto packages/apps/Settings
 cdv packages/apps/Settings
