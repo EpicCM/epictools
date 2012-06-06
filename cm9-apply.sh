@@ -76,8 +76,10 @@ cdb
 #cdv kernel/samsung/victory
 #cdb
 
-repo start auto packages/apps/Phone
-cdv packages/apps/Phone
+repo start auto packages/apps/Settings
+cdv packages/apps/Settings
+echo "### Fix null ptr exceptions in input settings. http://review.cyanogenmod.com/#/c/17193/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Settings refs/changes/93/17193/3 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto vendor/cm
