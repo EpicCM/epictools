@@ -75,8 +75,6 @@ echo "### epicmtd: Build libsensors from source. http://review.cyanogenmod.com/#
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/33/17533/1 && git cherry-pick FETCH_HEAD
 echo "### epicmtd: Adjust autoBrightnessLevels for new sensor lib. http://review.cyanogenmod.com/#/c/17534/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/34/17534/1 && git cherry-pick FETCH_HEAD
-echo "### Override SamsungRIL's responseSignalStrength class to suit Epic's absurd radio firmware http://review.cyanogenmod.com/#/c/17532/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/32/17532/5 && git cherry-pick FETCH_HEAD
 cdb
 
 #repo start auto frameworks/base 
