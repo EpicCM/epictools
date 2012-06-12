@@ -19,6 +19,13 @@ http_patch() {
   rm $PATCHNAME
 }
 
+wget_patch() {
+  PATCHNAME=$(basename $1)
+  wget $1
+  cat $PATCHNAME |patch -p1
+  rm $PATCHNAME
+}
+
 # Change directory verbose
 cdv() {
   echo
@@ -79,7 +86,7 @@ cdb
 repo start auto vendor/samsung
 cdv vendor/samsung
 echo "### epicmtd: don't copy sensor lib"
-http_patch http://www.shadowrising.org/epic4g/patches/epicmtd_libsensors_vendor.patch
+wget_patch http://www.shadowrising.org/epic4g/patches/epicmtd_libsensors_vendor.patch
 git add .
 git commit -m "DO NOT COMMIT TO GERRIT - epicmtd: don't copy sensor lib"
 cdb
