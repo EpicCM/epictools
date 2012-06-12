@@ -79,11 +79,11 @@ echo "### Override SamsungRIL's responseSignalStrength class to suit Epic's absu
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/32/17532/5 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto frameworks/base 
-cdv frameworks/base
-echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
-cdb
+#repo start auto frameworks/base 
+#cdv frameworks/base
+#echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
+#git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
+#cdb
 
 repo start auto vendor/samsung
 cdv vendor/samsung
