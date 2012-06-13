@@ -83,14 +83,6 @@ cdb
 #git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
 #cdb
 
-repo start auto vendor/samsung
-cdv vendor/samsung
-echo "### epicmtd: don't copy sensor lib"
-wget_patch http://www.shadowrising.org/epic4g/patches/epicmtd_libsensors_vendor.patch
-git add .
-git commit -m "DO NOT COMMIT TO GERRIT - epicmtd: don't copy sensor lib"
-cdb
-
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
