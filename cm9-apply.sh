@@ -76,6 +76,8 @@ git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicm
 echo "### epicmtd: Adjust autoBrightnessLevels for new sensor lib. http://review.cyanogenmod.com/#/c/17534/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/34/17534/1 && git cherry-pick FETCH_HEAD
 cdb
+echo "### epicmtd: keypad caharacter map: Fn+COMMA = popup special character picker, '\uEF01'"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/85/17585/1 && git cherry-pick FETCH_HEAD
 
 #repo start auto frameworks/base 
 #cdv frameworks/base
