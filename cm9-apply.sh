@@ -59,17 +59,17 @@ set -e
 
 ################ Apply Patches Below ####################
 
-repo start auto bootable/recovery
-cdv bootable/recovery
-echo "### recovery: Allow key to repeat on hold. http://review.cyanogenmod.com/#/c/15865/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_bootable_recovery refs/changes/65/15865/14 && git cherry-pick FETCH_HEAD
-cdb
+#repo start auto bootable/recovery
+#cdv bootable/recovery
+#echo "### recovery: Allow key to repeat on hold. http://review.cyanogenmod.com/#/c/15865/"
+#git fetch http://review.cyanogenmod.com/CyanogenMod/android_bootable_recovery refs/changes/65/15865/14 && git cherry-pick FETCH_HEAD
+3cdb
 
-repo start auto device/samsung/epicmtd
-cdv device/samsung/epicmtd
-echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
-cdb
+#repo start auto device/samsung/epicmtd
+#cdv device/samsung/epicmtd
+#echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
+#git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
+#cdb
 
 #repo start auto frameworks/base 
 #cdv frameworks/base
