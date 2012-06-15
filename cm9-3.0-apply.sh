@@ -59,16 +59,8 @@ set -e
 
 ################ Apply Patches Below ####################
 
-repo start auto bootable/recovery
-cdv bootable/recovery
-echo "### recovery: Allow key to repeat on hold. http://review.cyanogenmod.com/#/c/15865/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_bootable_recovery refs/changes/65/15865/14 && git cherry-pick FETCH_HEAD
-cdb
-
 repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
-echo "### epicmtd: Enable CWM repeatable keys http://review.cyanogenmod.com/#/c/16037/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/37/16037/1 && git cherry-pick FETCH_HEAD
 echo "### cm9-3.0-apply.sh: epicmtd: Temporary patch for kernel-3.0.x testing (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15585/"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/85/15585/1 && git cherry-pick FETCH_HEAD
 echo "### Update init.victory.usb.rc to fix adb, etc. for kernel-3.0.x (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15928/"
@@ -79,8 +71,6 @@ cdb
 
 #repo start auto frameworks/base 
 #cdv frameworks/base
-#echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
-#git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
 #cdb
 
 #repo start auto kernel/samsung/victory3/Kernel
