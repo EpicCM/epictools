@@ -69,9 +69,11 @@ echo "### epicmtd: Permission updates for kernel-3.0.x (DO NOT COMMIT) http://re
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/80/16080/3 && git cherry-pick FETCH_HEAD
 cdb
 
-#repo start auto frameworks/base 
-#cdv frameworks/base
-#cdb
+repo start auto frameworks/base 
+cdv frameworks/base
+echo "### Fixes to ensure keyboard backlight is lit when the keyboard is visible. http://review.cyanogenmod.com/18065"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/65/18065/1 && git cherry-pick FETCH_HEAD
+cdb
 
 #repo start auto kernel/samsung/victory3/Kernel
 #cdv kernel/samsung/victory3/Kernel
