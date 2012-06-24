@@ -55,16 +55,10 @@ set -e
 
 repo start auto device/samsung/epicmtd
 cdv device/samsung/epicmtd
-echo "### epicmtd: enable enable_vmnotif_option http://review.cyanogenmod.com/#change,13739"
-git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_device_samsung_epicmtd refs/changes/39/13739/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/base 
 cdv frameworks/base
-#echo "### telephony: CDMA signal bar threshold s/100/105/ to match Samsung's behavior (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/15580/"
-#git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
-echo "### Additional fixes for button/keyboard backlight auto-brightness. http://review.cyanogenmod.com/15726"
-git fetch http://r.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/26/15726/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto kernel/samsung/victory
@@ -75,18 +69,17 @@ repo start auto packages/apps/Phone
 cdv packages/apps/Phone
 echo "### Phone: add voicemail notification setting http://review.cyanogenmod.com/#change,13706"
 git fetch http://review.cyanogenmod.com/p/CyanogenMod/android_packages_apps_Phone refs/changes/06/13706/6 && git cherry-pick FETCH_HEAD
-echo "### Roaming Patch http://review.cyanogenmod.com/#/c/12624/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Phone refs/changes/24/12624/1 && git checkout FETCH_HEAD
+echo "### Phone: Roaming Fix http://review.cyanogenmod.com/#/c/12624/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Phone refs/changes/24/12624/1 && git cherry-pick FETCH_HEAD
+cdb
+
+repo start auto packages/providers/MediaProvider
+cdv packages/providers/MediaProvider
+echo "### Media Provider: Fix http://review.cyanogenmod.com/#/c/13251/"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_providers_MediaProvider refs/changes/51/13251/1 && git cherry-pick FETCH_HEAD
 cdb
 
 ###Added for AOKP###
-
-#cdv frameworks/base
-#echo "### Frameworks: Keyboard fix http://gerrit.sudoservers.com:8080/#/c/25/ and http://gerrit.sudoservers.com:8080/#/c/89/"
-#git fetch http://gerrit.sudoservers.com:8080/AOKP/frameworks_base refs/changes/25/25/1 && git cherry-pick FETCH_HEAD
-#git fetch http://gerrit.sudoservers.com:8080/AOKP/frameworks_base refs/changes/89/89/3 && git cherry-pick FETCH_HEAD
-#cdb
-
 
 #repo start auto vendor/aokp
 #cdv vendor/aokp
@@ -100,13 +93,6 @@ cdv vendor/samsung
 echo "### Samsung device proprietaries http://gerrit.sudoservers.com:8080/#/c/36/"
 git fetch http://gerrit.sudoservers.com:8080/AOKP/vendor_samsung refs/changes/36/36/1 && git cherry-pick FETCH_HEAD
 cdb
-
-repo start auto packages/providers/MediaProvider/
-cdv packages/providers/MediaProvider/
-echo "### Media Provider Fix - Lack of media http://gerrit.sudoservers.com:8080/#/c/36/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_providers_MediaProvider refs/changes/51/13251/1 && git cherry-pick FETCH_HEAD
-cdb
-
 
 ##### SUCCESS ####
 SUCCESS=true
