@@ -77,18 +77,6 @@ set -e
 #git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/80/15580/5 && git cherry-pick FETCH_HEAD
 #cdb
 
-repo start auto device/samsung/epicmtd
-cdv device/samsung/epicmtd
-echo "### Stock handling of sym/.com key (DO NOT COMMIT) http://review.cyanogenmod.com/#/c/18430/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_device_samsung_epicmtd refs/changes/30/18430/1 && git cherry-pick FETCH_HEAD
-cdb
-
-repo start auto frameworks/base 
-cdv frameworks/base
-echo "### input: add keymapping and handle www/com key for keypads in ics http://review.cyanogenmod.com/#/c/18381/"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/81/18381/2 && git cherry-pick FETCH_HEAD
-cdb
-
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
